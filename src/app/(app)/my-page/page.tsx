@@ -1,3 +1,4 @@
+import { User } from "@/payload-types";
 import configPromise from "@payload-config";
 import { getPayload } from "payload";
 
@@ -15,7 +16,7 @@ export default async function MyPage() {
       <h1>My Page</h1>
       {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
       <div>
-        {data.docs.map((user) => (
+        {data.docs.map((user: User) => (
           <div key={user.id}>
             <h2>{user.email}</h2>
           </div>
